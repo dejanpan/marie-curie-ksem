@@ -80,15 +80,15 @@ screens, fans, and trash cans in the former, %~\cite{TriebelAMN07},
 respectively wires, poles, ground, and scatter in the
 latter.%~\cite{Anguelov05discriminativelearning}.
 
-An EM-based algorithm for learning 3D models of indoor environments is
-presented by Liu et al.~\cite{ThrunEM3D}. The maps are created using
-mobile robots equipped with laser range finders, but they do not
-include any semantic information. Grau~\cite{GrauSceneAnalysis} uses a
-stereoscopic camera system and a knowledge base in the form of a
-semantic net to form 3D models of outdoor environments. A hybrid
-representation including spatial and semantic aspects is proposed by
-Galindo et al.~\cite{GalindoMultiHierarchical} for an indoor
-environment, but their approach needs further investigation.
+% An EM-based algorithm for learning 3D models of indoor environments is
+% presented by Liu et al.~\cite{ThrunEM3D}. The maps are created using
+% mobile robots equipped with laser range finders, but they do not
+% include any semantic information. Grau~\cite{GrauSceneAnalysis} uses a
+% stereoscopic camera system and a knowledge base in the form of a
+% semantic net to form 3D models of outdoor environments. A hybrid
+% representation including spatial and semantic aspects is proposed by
+% Galindo et al.~\cite{GalindoMultiHierarchical} for an indoor
+% environment, but their approach needs further investigation.
 
 Iocchi and Pellegrini~\cite{IocchiISPRS}, Mozos et
 al.~\cite{MartinezMozos07a}, and Vasudevan et
@@ -109,10 +109,10 @@ for manipulation is lost.  Also, the label categories need to be
 learned a priori through supervised learning and this makes it unclear
 whether these representations scale well.
 
-With few exceptions, in particular in the area of cognitive
-mapping as \cite{vasudevan07cognitive} and the work of Modayil and Kuipers~\cite{Modayil04}, but also
-including the more recent work by Triebel et al.~\cite{Triebel2007gfki},
-maps do not represent objects relevant to any robot tasks apart from navigation.
+% With few exceptions, in particular in the area of cognitive
+% mapping as \cite{vasudevan07cognitive} and the work of Modayil and Kuipers~\cite{Modayil04}, but also
+% including the more recent work by Triebel et al.~\cite{Triebel2007gfki},
+% maps do not represent objects relevant to any robot tasks apart from navigation.
 
 For modeling the static part of the environment N\"uchter and
 Hetzberg~\cite{nuechter08semanticmaps} classify 3D sensed data from a
@@ -126,22 +126,22 @@ complete 3D models. The same holds true for postures in the case of humans.
 
 \subsubsection{Object Detection, Recognition, and Reconstruction for Pick-and-Place Tasks}
 \label{sec:objects}
-Semantic maps in \ksem must also include models of the objects of daily use, which
+Semantic maps in \ksem\ must also include models of the objects of daily use, which
 are to be manipulated by the robot. Thus, we now consider recent
 work in object detection, categorization, localization, and
 reconstruction for robotic object perception.
 
-A vision-based grasping system which segments objects on a table and constructs
-triangular meshes for them is presented by Richtsfeld and Vincze~\cite{Richtsfeld08}.
-While the presented method is general and works for many objects, it creates
-complex models for certain objects, which could be simplified through the usage
-of geometric primitives. A simplification of the modeling problem is used in
-Grasp-It~\cite{Grasp-It}, where geometric shape primitives are used to model each
-object as a sphere, cylinder, cone or box.
+% A vision-based grasping system which segments objects on a table and constructs
+% triangular meshes for them is presented by Richtsfeld and Vincze~\cite{Richtsfeld08}.
+% While the presented method is general and works for many objects, it creates
+% complex models for certain objects, which could be simplified through the usage
+% of geometric primitives. A simplification of the modeling problem is used in
+% Grasp-It~\cite{Grasp-It}, where geometric shape primitives are used to model each
+% object as a sphere, cylinder, cone or box.
 
-Geons (geometric icons)~\cite{Geons} can be used to develop generic category
-descriptions using geometric primitives, but also additional category knowledge,
-for the purpose of building libraries of grasp models for a variety of objects.
+% Geons (geometric icons)~\cite{Geons} can be used to develop generic category
+% descriptions using geometric primitives, but also additional category knowledge,
+% for the purpose of building libraries of grasp models for a variety of objects.
 
 A computer vision- and machine learning-based method is used by Saxena
 et al.~\cite{Saxena08Grasping} to train classifiers that can predict
@@ -173,16 +173,16 @@ project CAD models from a database to the image and search for good matches in
 the edges domain, as in Ulrich et al.~\cite{ulrich-etal:09} for example. While
 this is a more direct method, it is still dependent on a database of CAD models.
 
-Available models of complex objects are decomposed into superquadric parts
-by Biegelbauer and Vincze~\cite{SuperQuadrics07} and Zhang et
-al.~\cite{SuperQuadricsAutomotive}, and these models are matched to a point cloud.
-This, however, needs a database of models, and moreover, their decomposition
-into superquadric components, which is often difficult to obtain.
-A sample consensus based approach for model decomposition is presented by
-Schnabel et al.~\cite{Schnabel2007}, where a set of 3D geometric primitives
-(planes, spheres, cylinders, cones and tori) are fit to noisy point clouds.
-Since the point clouds presented there are complete, the authors do not
-need to reconstruct the missing parts.
+% Available models of complex objects are decomposed into superquadric parts
+% by Biegelbauer and Vincze~\cite{SuperQuadrics07} and Zhang et
+% al.~\cite{SuperQuadricsAutomotive}, and these models are matched to a point cloud.
+% This, however, needs a database of models, and moreover, their decomposition
+% into superquadric components, which is often difficult to obtain.
+% A sample consensus based approach for model decomposition is presented by
+% Schnabel et al.~\cite{Schnabel2007}, where a set of 3D geometric primitives
+% (planes, spheres, cylinders, cones and tori) are fit to noisy point clouds.
+% Since the point clouds presented there are complete, the authors do not
+% need to reconstruct the missing parts.
 
 Thrun and Wegbreit~\cite{Thrun05Symmetries} describe a method for detecting and verifying
 symmetries in point clouds obtained from a single viewpoint which works very well for
@@ -195,11 +195,11 @@ problem by using features like the ones proposed by Quack et al.~\cite{quack2007
 Yan et al.~\cite{yan2007mbo}, and Savarese and Fei-Fei~\cite{savarese2007goc},
 which work best on low scale and texture variance.  The
 scaling variance can be reduced significantly by a previous segmentation.
-Saxena et al.~\cite{saxena:07:iccv} try to extract the 3D world out of only one view in
-order to improve the segmentation of objects.  Another approach is to
-actively explore the environment and segment objects using the motion to
-generate 3D shape information, as done by Welke et al.~\cite{welke2008osu}
-and Feldman and Weinshall~\cite{feldman2008msa} for example.
+% Saxena et al.~\cite{saxena:07:iccv} try to extract the 3D world out of only one view in
+% order to improve the segmentation of objects.  Another approach is to
+% actively explore the environment and segment objects using the motion to
+% generate 3D shape information, as done by Welke et al.~\cite{welke2008osu}
+% and Feldman and Weinshall~\cite{feldman2008msa} for example.
 
 To improve the segmentation, Lai and Fox \cite{Lai-RSS-09} take a randomized approach
 by classifying a ``soup of segments'' generated by different combinations of clusters,
@@ -214,12 +214,6 @@ For performing high-level tasks, robots need large amounts of semantic informati
 like the types, locations and properties of objects. Very few systems exist that offer this kind
 of deep semantic environment information.
 
-% Some systems detect only rather coarse objects like the floor, the ceiling and walls in 3D laser
-% scans~\cite{nuechter08semanticmaps}, or focus on distinguishing different kinds of rooms based
-% on the objects inside~\cite{vasudevan07cognitive} or spatial relations between them~\cite{TriebelAMN07}.
-% Other methods, like~\cite{Rusu08RAS2}
-% or \cite{ekvall07objectdetection} detect, identify and localize objects in the scene and therefore
-% create the basis for more abstract representations. However,
 At the highest level of abstraction, one considers
 the recognized objects, whose semantic meaning is only implicitly represented: Humans immediately
 associate various properties with something called a ``cupboard'', while robots usually do not have
@@ -272,16 +266,16 @@ systems community, where Philipose and his colleagues
 \cite{Intille06} learn models of daily activities from ubiquitous
 sensor networks.
 
-If maps are to be used for more than navigation and mere obstacle avoidance,
-a semantic interpretation of the observed scenes is required, which
-necessitates a meaningful labeling of objects appearing in mapped scenes.
-Posner et al.~\cite{PosnerCumminsNewman08} propose a two-stage process to
-solve this problem, where, at the local level, classification is based on
-appearance descriptors, and at the global scene level, Markov random fields
-(MRFs) are applied to model relationships.  Triebel et al.~\cite{Triebel06robust3d}
-draw upon statistical relational learning methods, specifically
-associative Markov networks, to solve a similar problem --- again, however,
-on laser data only and at a low level of abstraction.
+% If maps are to be used for more than navigation and mere obstacle avoidance,
+% a semantic interpretation of the observed scenes is required, which
+% necessitates a meaningful labeling of objects appearing in mapped scenes.
+% Posner et al.~\cite{PosnerCumminsNewman08} propose a two-stage process to
+% solve this problem, where, at the local level, classification is based on
+% appearance descriptors, and at the global scene level, Markov random fields
+% (MRFs) are applied to model relationships.  Triebel et al.~\cite{Triebel06robust3d}
+% draw upon statistical relational learning methods, specifically
+% associative Markov networks, to solve a similar problem --- again, however,
+% on laser data only and at a low level of abstraction.
 
 %\fbox{Include the trajectory learning work from \cite{stulp09compact}?}
 %\fbox{Zoltan: maybe in prev work of the proposers, right? here maybe their related work}
@@ -295,25 +289,25 @@ observations resulted from the same real world object. This type
 of inference is needed to recognize previously observed objects again,
 which in turn must be solved to build spatio-temporal environment models.
 
-This problem can be viewed as an entity resolution problem that arises
-in many information integration scenarios: Given two or more sources
-containing records on the same set of real-world entities (e.g. mapped
-objects), the problem is to determine which of the records actually
-refer to the same object, as we typically have no unique identifiers
-that tell us what records from one source correspond to those in the
-other sources. Furthermore, the records representing the same entity
-may have differing or even partially contradictory information.  For
-example, one record may have an attribute falsely assigned (as a
-result of sensor inaccuracy), another may be missing some fields. An
-entity resolution algorithm attempts to identify the matching records
-from multiple sources (i.e. those corresponding to the same real-world
-entity), and merges the matching records as best as it can. Entity
-resolution algorithms typically rely on user-defined functions that
-(a) compare fields or records to determine if they match (are likely
-to represent the same real world entity), and (b) merge matching
-records into one, and in the process perhaps combine fields (e.g.,
-creating a new name based on two slightly different versions of the
-name).
+% This problem can be viewed as an entity resolution problem that arises
+% in many information integration scenarios: Given two or more sources
+% containing records on the same set of real-world entities (e.g. mapped
+% objects), the problem is to determine which of the records actually
+% refer to the same object, as we typically have no unique identifiers
+% that tell us what records from one source correspond to those in the
+% other sources. Furthermore, the records representing the same entity
+% may have differing or even partially contradictory information.  For
+% example, one record may have an attribute falsely assigned (as a
+% result of sensor inaccuracy), another may be missing some fields. An
+% entity resolution algorithm attempts to identify the matching records
+% from multiple sources (i.e. those corresponding to the same real-world
+% entity), and merges the matching records as best as it can. Entity
+% resolution algorithms typically rely on user-defined functions that
+% (a) compare fields or records to determine if they match (are likely
+% to represent the same real world entity), and (b) merge matching
+% records into one, and in the process perhaps combine fields (e.g.,
+% creating a new name based on two slightly different versions of the
+% name).
 
 While early work has often phrased the problem as a
 classification problem where a pair of records would be independently
@@ -334,7 +328,7 @@ equivalences.
 %robotic perception (2D + 3D), AI and machine learning
 \subsection{Appropriateness of research methodology and approach}
 In order to clarify the motivation from above, we identified
-the following four subgoals of the project: \\
+the following three subgoals of the project: \\
 \textbf{Subgoal 1: Representations in \ksem} will be hybrid by
   integrating geometric descriptions (such as primitives, meshes,
   voxels), first-order description-logic-based symbolic representations
@@ -375,16 +369,203 @@ the following four subgoals of the project: \\
   \end{itemize}
   These learning problems require autonomous and on-demand (partial) 
   processing of sensor data to enable life-long learning.\\
-\textbf{Subgoal 4: Applications for robot control} to enable
-  real-world problem-solving within a household assistance system such
-  as execution of everyday manipulation actions (e.g. emptying a
-  shopping bag, set the table for a given meal, or cleaning the table,
-  while stowing items in their respective places, such as the fridge or
-  dish washer) and task-dependent partial environment mapping.
+% \textbf{Subgoal 4: Applications for robot control} to enable
+%   real-world problem-solving within a household assistance system such
+%   as execution of everyday manipulation actions (e.g. emptying a
+%   shopping bag, set the table for a given meal, or cleaning the table,
+%   while stowing items in their respective places, such as the fridge or
+%   dish washer) and task-dependent partial environment mapping.
 
 All of the subgoals named above are to be implemented in a system that
 is to run on real robot platforms in real household environments.
 
+The project's goals will be achieved in three work packages, reflecting
+the previously identified subgoals.
+
+\textbf{WP 1: Representations of \ksem\ semantic maps}
+
+The first work package is concerned with achieving subgoal 1, the design
+and implementation of appropriate representational and reasoning
+mechanisms required by \ksem. It is subdivided into the following
+three tasks.
+
+\begin{description}
+  \item[Task 1.1: OWL Concept Taxonomy] The basic symbolic
+    representation will be realized using SWI Prolog with an additional
+    package for OWL (Web Ontology Language). Based on previous work of
+    the proposers, we will specify concepts for objects, object groups,
+    places, object and scene states, and we will anchor these concepts
+    in the data structures used for map represenation and those
+    generated by the perception routines to be developed in WP 2.
+    As an example, objects of daily use will have locations attached to
+    them, such as \emph{home} places, state-dependant locations (dish
+    washer when dirty), and locations where they belong (e.g. within
+    arrangements of objects on a table).
+  \item[Task 1.2: Spatial Relations and Scene Representation and
+    Reasoning] Representational primitives of key importance in
+    \ksem\ project are qualitative as well as quantitative spatial relations.
+    They are essential for parameterizing robot actions and
+    communicating abstract information about the environment,
+    respectively. While quantitative relations can be optained in a
+    straight-forward manner, qualitative will be realized following an
+    approach inspired by~\cite{Gapp95} and will be learned from
+    observations of human activity.
+    
+  \item[Task 1.3: Representations of Action-related Concepts]
+    In order to relate objects, scenes, etc. to the actions and the
+    activities they are involved in, we will develop \emph{action-related
+    concepts} as our key representational mechanisms. Preliminary
+    investigations in this regard have been performed in the context
+    of mobile pick-and-place tasks, where the proposer's group has
+    developed the notion of \emph{action-related places} (\textsc{ARPlaces}), i.e. the
+    set of robot poses from which a given pick task is predicted to be
+    successful. A second starting point is our previous work on
+    \emph{grounded action models} (\textsc{GrAM}), where we have introduced a
+    new class of concepts in description-logic-based knowledge
+    representations, integrating actions and action models into the
+    knowledge representation and inference mechanisms of intelligent
+    systems. 
+     
+  % \item[Task 1.4: First-order Probabilistic Representations of
+  %   \ksem\ semantic maps] In previous work, we have developed \textsc{ProbCog}, 
+  %   a statistical relational learning system that supports efficient
+  %   learning and inference in relational domains, focusing mainly on
+  %   probabilistic logical models. Based on a common data model, we
+  %   integrate various representation formalisms and have successfully
+  %   extended the expressiveness and practical applicability of existing
+  %   approaches. \textsc{ProbCog} thus provides a coherent probabilistic framework
+  %   that enables robots to deal with a high degree of uncertainty and
+  %   complexity in a variety of application contexts, including adaptive
+  %   plan generation for under-specified tasks and heuristic generation.
+
+  %   This work package will extend \textsc{ProbCog} with mechanisms needed
+  %   for spatial, temporal and spatio-temporal reasoning. Using these
+  %   extensions. we will be able to probabilistically learn and reason about
+  %   the spatial and temporal aspects of \astom s.
+
+  %   One necessary extension is the inclusion of continuous variables,
+  %   which are needed to represent coordinates and quantitative
+  %   restrictions on coordinates. One of the key research questions here is
+  %   to find suitable representations without blowing up the size of the
+  %   graphical models representing the respective joint distributions.
+\end{description}
+
+\textbf{WP 2: Perception}
+The objective in WP~2 is to achieve subgoal 2, i.e. achieving the
+perceptual capabilities required for object and scene recognition and
+interpretation, object detection and reconstruction. 
+\begin{description}
+\item[Task 2.1: Object Detection and Perception] In this task, we will
+  design, implement and analyze a perception system that enables
+  the robot to infer \emph{when} \emph{which} object is \emph{where} by
+  accomplishing the following perceptual task: given (1)~a set of
+  perceptually distinct object instances (e.g. textured mugs, cereal boxes), 
+  (2)~a set of perceptually indistinguishable object instances
+  (e.g. plates, bowls) and (3)~a set of regions of interest (e.g. tabletops, counters),
+  detect and localize these objects of interest whenever they are present in those regions.
+  The result is a set of time-stamped observations that
+  include the object of interest, its pose, and the respective region of
+  interest.
+
+  The research in this work package focuses mainly on object identity resolution 
+  and the inference about whether objects have been removed from regions of interest.
+  Object identity resolution is the problem of deciding whether or not two partial views
+  of some objects in the environment taken at different times $t_1$ and
+  $t_2$ refer to the same object in the environment. The aspects of the problem
+  that render this inference task hard are that the different views potentially have
+  little overlap, that the views are corrupted by sensor
+  noise and specular reflections and that views might be limited
+  through occlusions. We will investigate how we can apply and adapt
+  mechanisms from entity resolution originally developed in the area of data
+  mining to better handle the spatial and temporal context
+  of this perception task.
+\item[Task 2.2: Scene Perception, Interpretation and Analysis]
+  This task will investigate the knowledge-based perception
+  mechanisms for scenes and object arrangements. The inclusion of
+  knowledge-based mechanisms will enable us to improve scene perception
+  through the use of prior knowledge, the semantic object model of the
+  environment, knowledge about everyday activities, and the effects of
+  everyday activities on the situations in the environment.
+\item[Task 2.3: Perceiving Object States]
+  In the project \ksem, the real-world perception of object states is
+  beyond the scope of the project, but we still need to realize
+  perception mechanisms for state estimation in order to realize a
+  complete and integrated system.
+
+  We will simplify the state estimation in two ways. First, we will use
+  --- whereever possible --- sensor-equipped objects in distributed sensor
+  networks that can estimate their own states, e.g. whether they are
+  filled.
+  Second, for those states that are needed but cannot be perceived
+  otherwise, we will simplify the perception tasks by making the states
+  perceptually distinctive, e.g. by using RFID tags to store state
+  information or by color coding states.
+\end{description}
+
+\textbf{WP 3: Acquisition and Learning of \ksem\ semantic maps}
+In this work package, we focus on the learning problems in 
+\ksem\ which can be described as follows: \emph{Given} (1)~background
+knowledge needed for learning of semantic maps,  and (2)~a stream
+of time-stamped partial observations of situations concerning what is
+on tables, on the counter, the states of objects, and object
+arrangements, \emph{learn} a mapping for this particular environment.
+\begin{description}
+\item[Task 3.1: Learning Grounded Representations] The
+  type of information that we want to leverage here comes from web instructions.
+  To make sense of web instructions, one first needs to apply natural language
+  processing techniques. By using a parser based on probabilistic
+  context-free grammars (PCFGs),
+  we have showed how to obtain the structure of sentences and were able to assign to each word an appropriate synonym ring.
+  We then used the WordNet lexical database in order to disambiguate word senses based on learned
+  correlations between entity types, action verbs and prepositions, and to furthermore
+  link the actions and entities appearing in instructions to concepts within the Cyc
+  upper ontology. In this way, we can semantically interpret the set of instructions that
+  constitutes a particular activity, which opens up 
+  new possibilities for detecting these activities within the environment.
+
+\item[Task 3.2: Learning Important Locations] 
+  Key locations where certain actions take place need to be identified from
+  observation data, both for the learning of action-related places
+  and the understanding of human behavior. To this effect, we will need to develop extensions
+  to existing methods such as hierarchical conditional random fields
+  that also take related actions into account.
+
+  Additionally, the typical and storage locations for objects have to
+  be inferred from the probabilistic models built by observations and
+  web instructions.
+  An important aspect to consider is that \ksem needs to learn the distributions
+  of locations both for (1)~\underline{specific objects} and (2)~objects of a
+  \underline{specific type}.
+
+\item[Task 3.3: Learning Object Arrangements]
+  We are planning to expand the perception and learning system we developed
+  to consider spatial relations between different objects just as it considered relations between
+  different parts of objects. We will be using \emph{WUP} similarities.
+  An example of such a feature is a qualitative spatial relation
+  such as \emph{left of}, which is represented as a 
+  pair of positions $\langle$ \emph{o,refo} $\rangle$ where
+  \emph{o} is the position of an object and
+  \emph{refo} is the position of the reference object. So
+  \emph{P(left-of(o,refo))} denotes the probability that with
+  respect to their coordinates the object \emph{o} would be
+  considered to be to the \emph{left of} the object \emph{refo}.
+
+  It is also important to note that qualitative spatial relations
+  depend on the object types. Depending on whether the
+  object pair would be a plate and a fork or a building and a gate,
+  the expected positions satisfying the relation would be very
+  different. We intend to learn appropriate probability distributions
+  from observations of human activities.
+
+\item[Task 3.4: Lifelong \ksem\ Learning]
+  In this task, we will realize a 
+  \emph{Passive Perception} system, i.e. a set of mechanisms that enable the robot to 
+  remember scenes that it encounters while performing its activities, storing them 
+  as memory structures in the knowledge base for incremental learning. In that sense we will implement fast 
+  logging mechanisms for raw and partially processed sensor data, derive
+  sophisticated memory infrastructure formats (aka time-stamped objects store) 
+  and develop interfaces for continous and on-demand processing of previously observed data.
+\end{description}
 %kinect, mechanical turk, pcl, RGBD slam, hand-held devices, google cloud robotics, semantic vision challenge, 
 %aim at the realistic and grounded application + demo
 \subsection{Originality and Innovative nature of the project, and relationship to the state-of-the-art of 
@@ -396,7 +577,7 @@ environment exploration and activity pbservation. To this end, we
 will design, implement and empirically analyze semantic model 
 acquisition mechanisms for objects and everyday activities in order 
 to generate semantic maps of human living environment.\\
-\todo{Rephrase to correspond to the teaser pic on the first page}
+\todo{Rephrase to correspond to the teaser pic on the first page}\\
 As an example, consider the following query that might arise within a
 household scenario: A human asks the robot to retrieve a glass he had
 been drinking from earlier. This simple request can spawn several queries to
@@ -411,6 +592,8 @@ possibly additional manipulation constraints linked to the glass, such
 as maintaining a vertical orientation over the whole action.
 A system that is able to tackle above described challenges, to the best of our
 knowledge, does not exist.
+\todo{Strong point shall be the collaboration between these PR2 Beta Sites:
+LAAS, Freiburg, Berkeley, Bosch, Willow, UPENN}
 \subsection{Timeliness and relevance of the project}
 With all the recent advances in the field of personal robotics and with first
 personal robots projected to be deployed in households within next 5 to 10 years, 
