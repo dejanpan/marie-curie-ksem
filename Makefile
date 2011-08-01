@@ -1,6 +1,8 @@
 SRC = ksem
+CV = pangercic_cv
 
 all:
+	pdflatex $(CV).tex
 	pdflatex $(SRC).tex
 	bibtex $(SRC)
 	pdflatex $(SRC).tex
