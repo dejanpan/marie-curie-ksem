@@ -139,14 +139,81 @@ at Berkeley and Prof. Beetz at TUM, during the preparation of this project propo
 \subsection{Feasibility and credibility of the project, including work plan} 
 In Sections~\ref{sec:q1} and~\ref{sec:q2} we detailed the three tasks to be carried 
 out in this project, including the research methodology and the expected results. 
-In the figure~\todo{make table or figure} we have represented the work plan including the three 
-work packages, plus an additional extra task for the fellowship's training, and we assigned 
-an approximate time schedule for each of them. \\
-\todo{table, figure}\\
-\subsubsection{Task 1}
-\subsubsection{Task 2}
-\subsubsection{Task 3}
-\subsubsection{Task 4}
+In Table~\ref{tab:timeplan} we have represented the work plan including the three 
+work packages, plus two additional extra tasks for the integration of the developed systems
+and the fellowship's training, and we assigned an approximate time schedule for each of them.
+\begin{table}[h!]
+  \begin{Timeplan}
+    % ---------------------------------------------------------------------
+    % Representations
+    % ---------------------------------------------------------------------
+    \TimeplanChapter{\ksem\ Representation}
+    \TimeplanRule{\ksem-Rep1 OWL}{0}{24}
+    \hline
+    \TimeplanRule{\ksem-Rep2 Scenes}{0}{30}
+    \hline
+    \TimeplanRule{\ksem-Rep3 Action-related}{12}{24}
+    \hline
+    % \TimeplanRule{\ksem-Rep4 First-order}{24}{12}
+    % \hline
+    
+    % ---------------------------------------------------------------------
+    % Perception
+    % ---------------------------------------------------------------------
+    \TimeplanChapter{\ksem\ Perception}
+    \TimeplanRule{\ksem-Per0 Infrastructure}{0}{18}
+    \hline
+    \TimeplanRule{\ksem-Per1 Objects}{0}{24}
+    \hline
+    \TimeplanRule{\ksem-Per2 Scenes}{0}{24}
+    \hline
+    \TimeplanRule{\ksem-Per3 States}{0}{24}
+    \hline
+    % \TimeplanRule{\ksem-Per4 Activities}{24}{12}
+    % \hline
+    
+    % ---------------------------------------------------------------------
+    % Learning
+    % ---------------------------------------------------------------------
+    \TimeplanChapter{\ksem\ Acquisition and Learning}
+    \TimeplanRule{\ksem-Learn1 Grounding}{0}{18}
+    \hline
+    \TimeplanRule{\ksem-Learn2 Locations}{3}{24}
+    \hline
+    \TimeplanRule{\ksem-Learn3 Relations}{6}{24}
+    \hline
+    \TimeplanRule{\ksem-Learn4 Lifelong}{18}{18}
+    \hline
+    
+    % ---------------------------------------------------------------------
+    % Integration, Documentation
+    % ---------------------------------------------------------------------
+    \TimeplanChapter{Integration, Evaluation und Documentation}
+    \parbox[t]{\CaptionWidth}{\raggedright System integration\\*[0.1cm]} &
+    \hspace*{9\MonthWidth}\rule{3\MonthWidth}{1.0ex}
+    \hspace*{8.65\MonthWidth}\rule{3\MonthWidth}{1.0ex}
+    \hspace*{8.65\MonthWidth}\rule{3\MonthWidth}{1.0ex}\\
+    \hline
+    \parbox[t]{\CaptionWidth}{\raggedright Evaluation, documentation\\*[0.1cm]} &
+    \hspace*{9\MonthWidth}\rule{3\MonthWidth}{1.0ex}
+    \hspace*{8.65\MonthWidth}\rule{3\MonthWidth}{1.0ex}
+    \hspace*{8.65\MonthWidth}\rule{3\MonthWidth}{1.0ex}\\
+    \hline
+    \parbox[t]{\CaptionWidth}{\raggedright OpenSource Software Release\\*[0.1cm]} &
+    \hspace*{9\MonthWidth}\rule{3\MonthWidth}{1.0ex}
+    \hspace*{8.65\MonthWidth}\rule{3\MonthWidth}{1.0ex}
+    \hspace*{8.65\MonthWidth}\rule{3\MonthWidth}{1.0ex}\\
+    
+    \TimeplanChapter{Training for Applicant}
+    \parbox[t]{\CaptionWidth}{\raggedright Training\\*[0.1cm]} &
+    \hspace*{9\MonthWidth}\rule{1\MonthWidth}{1.0ex}
+    \hspace*{8.65\MonthWidth}\rule{1\MonthWidth}{1.0ex}
+    \hspace*{8.65\MonthWidth}\rule{1\MonthWidth}{1.0ex}\\
+    \hline
+  \end{Timeplan}
+  \caption{Timeplan}
+  \label{tab:timeplan}
+\end{table}
 %work plan, gantt diagram, \\
 %todo{Eric: Do we need risk analysis???}
 \subsection{Practical and administrative arrangements and support for the hosting of the fellow 
