@@ -6,7 +6,7 @@ aspects of the proposal}
 Environment models are resources  for enabling robots to perform their
 tasks more reliably, efficiently, and competently by using information
 about the  environments. The proposed  project \ksem\ (Knowledge-enabled
-Semantic Maps) investigates a new generation of environment models that
+Semantic Object Maps) investigates a new generation of environment models that
 are to enable  robots to perform everyday manipulation  tasks in human
 environments effectively and efficiently.   To this end, \ksem\ proposal
 extends state-of-the-art  models such  as Semantic Object  Models with
@@ -16,23 +16,23 @@ of  objects  depending  on  their  location  (perishable  objects  are
 typically to  be found in  refrigerators), the dependence  of activity
 contexts  on  object locations  (if  pots are  on  the  oven then  the
 activity   context  is   probably  meal   preparation).   Using  these
-representational mechanisms \ksem\ projects provides semantic object maps that can
+representational mechanisms \ksem\ project provides semantic object maps that can
 characterize objects and places in the environment with respect to the
 role they  play in activities  (affordances). These are  necessary for
 autonomous robots to do the right  actions to the right objects in the
 right way: when setting the  table, the robot should retrieve the cups
 from the cupboard because they  are clean. When cleaning the table the
 robot  should  put  the  dirty  cups  into  the  dishwasher  to  clean
-them.  Semantic maps in \ksem\ project  enable the  robot  to  infer  this kind  of  commonsense
+them.  Semantic object maps in \ksem\ project  enable the  robot  to  infer  this kind  of  commonsense
 knowledge.   Technologically,  \ksem \ will  be realized as  semantic object  models
 combined with  relational probabilistic models that  relate objects to
-activities, places,  time, roles, etc.  \ksem\ semantic maps are (semi-)automatically
+activities, places,  time, roles, etc.  \ksem\ semantic object maps are (semi-)automatically
 acquired through the combination of semantic object model acquisition,
 the observation of everyday activities, the use of web instructions on
 everyday activities and statistical relational learning. Usefulness of 
-the \ksem project will be demonstrated  in the context of  setting  the  table, 
-loading  the  dishwasher,  and cleaning up as the primary task domain.
-The joint probability distributions of semantic maps in \ksem are to represent the
+the \ksem\ project will be demonstrated  in the context of  setting  the  table, 
+loading  the  dishwasher and simulating the shopping task (see Figure~\ref{fig:teaser}, \todo{video}).
+The joint probability distributions of semantic object maps in \ksem are to represent the
 dynamic aspects of the environment in the context of everyday
 activities, which include:
 \begin{itemize}
@@ -58,12 +58,14 @@ activities, which include:
 \todo{Dejan: SHORTEN}\\
 According to the research topics of the \ksem\ project, we will now
 briefly review relevant research directions in the areas of semantic
-object maps, object perception, perception of everyday activities,
-knowledge representation for robots, statistical relational models,
-spatio-temporal learning, and entity resolution.
+object maps, object perception,knowledge representation for robots, statistical relational models,
+spatio-temporal learning, and entity resolution. The project will
+explicitly not deal with the research on perception of humans and their activities.
+Where needed we will either apply manual labeling techniques or make use 
+of the existing frameworks such as e.g. OpenNI~\footnote{\url{http://www.openni.org/}}.
 \subsubsection{Semantic Object Maps: Acquisition and Use}
 \label{sec:soms}
-As semantic maps include models of the environment structure and the static
+As semantic object maps include models of the environment structure and the static
 components of the environment including the furniture, appliances,
 etc. we will first consider the state of the art in the acquisition
 and use of 3D semantic object maps for everyday manipulation.
@@ -123,11 +125,11 @@ in two steps, first a hypothesis is extracted from a depth image
 using an appearance based method, then 3D matching to a model is
 performed to evaluate the classification. This however requires 2D
 models for all poses of each object to be detected, as well as the
-complete 3D models. The same holds true for postures in the case of humans.
-
+complete 3D models. The same holds true for postures in the case of humans.\\
+\todo{Include my mapping paper.}
 \subsubsection{Object Detection, Recognition, and Reconstruction for Pick-and-Place Tasks}
 \label{sec:objects}
-Semantic maps in \ksem\ must also include models of the objects of daily use, which
+Semantic object maps in \ksem\ must also include models of the objects of daily use, which
 are to be manipulated by the robot. Thus, we now consider recent
 work in object detection, categorization, localization, and
 reconstruction for robotic object perception.
@@ -207,8 +209,8 @@ by classifying a ``soup of segments'' generated by different combinations of clu
 and use the results to get a final segmentation. They also explore different domain
 adaptation techniques in order to incorporate synthetic data in training their classifier.
 Though they are working with outdoor data, the same techniques can be applied to segment
-and classify indoor objects using low resolution 3D data, e.g. from time-of flight cameras.
-
+and classify indoor objects using low resolution 3D data, e.g. from time-of flight cameras.\\
+\todo{include my both humanoids papers}
 \subsubsection{Symbolic Knowledge for \ksem}
 \label{sec:knowledge-representation}
 For performing high-level tasks, robots need large amounts of semantic information from their environment model,
@@ -227,8 +229,8 @@ and do not leverage the power of hierarchical, abstract knowledge representation
 Galindo et al.~\cite{galindo08taskplanning} present a system for automatically building maps that
 combine a \emph{spatial hierarchy} of local metric and global topological maps with a \emph{conceptual
 hierarchy} that describes some semantic properties of rooms and objects. In this respect, their approach is
-similar to ours, but the conceptual hierarchy is much simpler and the spatial description much coarser.
-
+similar to ours, but the conceptual hierarchy is much simpler and the spatial description much coarser.\\
+\todo{include my IROS 2011 paper}
 
 \subsubsection{Statistical Relational Models}
 \label{sec:markov}
@@ -244,7 +246,7 @@ link prediction~\cite{taskar03link} and object identification~\cite{singla06enti
 In particular, the methods of statistical relational learning allow
 to represent full-joint distributions over logical propositions about a changing set of entities in
 a concise, declarative manner, and they provide a fully integrated framework for learning and inference. Therefore,
-they are ideally suited to the representation of the probabilistic components of semantic maps in \ksem as we envision them,
+they are ideally suited to the representation of the probabilistic components of semantic object maps in \ksem as we envision them,
 since we need to consider, for example, spatial relations between objects in the environment, their attributes
 changing over time, their relevance to activities taking place and the effect these activities may have upon them.
 
@@ -252,7 +254,7 @@ changing over time, their relevance to activities taking place and the effect th
 \label{sec:spatio-temporal-learning}
 
 Our intended research in learning spatio-temporal structures for
-semantic maps in \ksem is inspired by research in visual analytics for the analysis
+semantic object maps in \ksem is inspired by research in visual analytics for the analysis
 of movement data. Andrienko et al. learn concepts like the
 working place, the living place, typical navigation routes and other
 spatio-temporal behavior patterns from GPS-data from their car
@@ -323,8 +325,7 @@ entity; the importance of certain predicates can be learned from
 statistical data.  Most importantly, this relational approach
 considers the objects collectively and does not assume that the
 equivalence of a pair of objects is independent of other
-equivalences.
-
+equivalences. \\
 %Intro to the proposal, Semantic maps (temporal and spatial aspects), multidisciplinarity vs interdisciplinarity:
 %robotic perception (2D + 3D), AI and machine learning
 \subsection{Appropriateness of research methodology and approach}
@@ -348,7 +349,7 @@ the following three subgoals of the project: \\
   temporally related). This includes methods for identity resolution and
   estimation of object state based on partial information and context to
   allow affordance-based manipulation. \\
-\textbf{Subgoal 3: Learning of semantic maps} for autonomous world state
+\textbf{Subgoal 3: Learning of semantic object maps} for autonomous world state
   interpretation. Some of the identified learning problems are:
   \begin{itemize}
     \item Learning typical locations of objects such as storage or
@@ -384,7 +385,7 @@ is to run on real robot platforms in real household environments.
 The project's goals will be achieved in three work packages, reflecting
 the previously identified subgoals.
 
-\textbf{WP 1: Representations of \ksem\ semantic maps}
+\textbf{WP 1: Representations of \ksem\ semantic object maps}
 
 The first work package is concerned with achieving subgoal 1, the design
 and implementation of appropriate representational and reasoning
@@ -395,7 +396,7 @@ three tasks.
   \item[Task 1.1: OWL Concept Taxonomy] The basic symbolic
     representation will be realized using SWI Prolog with an additional
     package for OWL (Web Ontology Language). Based on previous work of
-    the proposers, we will specify concepts for objects, object groups,
+    the return host, we will specify concepts for objects, object groups,
     places, object and scene states, and we will anchor these concepts
     in the data structures used for map represenation and those
     generated by the perception routines to be developed in WP 2.
@@ -418,7 +419,7 @@ three tasks.
     activities they are involved in, we will develop \emph{action-related
     concepts} as our key representational mechanisms. Preliminary
     investigations in this regard have been performed in the context
-    of mobile pick-and-place tasks, where the proposer's group has
+    of mobile pick-and-place tasks, where the return host group has
     developed the notion of \emph{action-related places} (\textsc{ARPlaces}), i.e. the
     set of robot poses from which a given pick task is predicted to be
     successful. A second starting point is our previous work on
@@ -480,7 +481,8 @@ interpretation, object detection and reconstruction.
   through occlusions. We will investigate how we can apply and adapt
   mechanisms from entity resolution originally developed in the area of data
   mining to better handle the spatial and temporal context
-  of this perception task.
+  of this perception task.\\
+  \todo{include paper by Blodow, Jain}
 \item[Task 2.2: Scene Perception, Interpretation and Analysis]
   This task will investigate the knowledge-based perception
   mechanisms for scenes and object arrangements. The inclusion of
@@ -488,6 +490,7 @@ interpretation, object detection and reconstruction.
   through the use of prior knowledge, the semantic object model of the
   environment, knowledge about everyday activities, and the effects of
   everyday activities on the situations in the environment.
+\todo{include WUP similarities}
 \item[Task 2.3: Perceiving Object States]
   In the project \ksem, the real-world perception of object states is
   beyond the scope of the project, but we still need to realize
@@ -504,10 +507,10 @@ interpretation, object detection and reconstruction.
   information or by color coding states.
 \end{description}
 
-\textbf{WP 3: Acquisition and Learning of \ksem\ semantic maps}
+\textbf{WP 3: Acquisition and Learning of \ksem\ semantic object maps}
 In this work package, we focus on the learning problems in 
 \ksem\ which can be described as follows: \emph{Given} (1)~background
-knowledge needed for learning of semantic maps,  and (2)~a stream
+knowledge needed for learning of semantic object maps,  and (2)~a stream
 of time-stamped partial observations of situations concerning what is
 on tables, on the counter, the states of objects, and object
 arrangements, \emph{learn} a mapping for this particular environment.
@@ -517,11 +520,11 @@ arrangements, \emph{learn} a mapping for this particular environment.
   To make sense of web instructions, one first needs to apply natural language
   processing techniques. By using a parser based on probabilistic
   context-free grammars (PCFGs),
-  we have showed how to obtain the structure of sentences and were able to assign to each word an appropriate synonym ring.
-  We then used the WordNet lexical database in order to disambiguate word senses based on learned
+  return host group has showed how to obtain the structure of sentences and was able to assign to each word an appropriate synonym ring.
+  They then used the WordNet lexical database in order to disambiguate word senses based on learned
   correlations between entity types, action verbs and prepositions, and to furthermore
   link the actions and entities appearing in instructions to concepts within the Cyc
-  upper ontology. In this way, we can semantically interpret the set of instructions that
+  upper ontology. In this way, they can semantically interpret the set of instructions that
   constitutes a particular activity, which opens up 
   new possibilities for detecting these activities within the environment.
 
@@ -535,7 +538,7 @@ arrangements, \emph{learn} a mapping for this particular environment.
   Additionally, the typical and storage locations for objects have to
   be inferred from the probabilistic models built by observations and
   web instructions.
-  An important aspect to consider is that \ksem needs to learn the distributions
+  An important aspect to consider is that \ksem\ needs to learn the distributions
   of locations both for (1)~\underline{specific objects} and (2)~objects of a
   \underline{specific type}.
 
@@ -578,8 +581,9 @@ environment models that can be inferred from a combination of
 environment exploration and activity pbservation. To this end, we 
 will design, implement and empirically analyze semantic model 
 acquisition mechanisms for objects and everyday activities in order 
-to generate semantic maps of human living environment.\\
-\todo{Dejan: Rephrase to correspond to the teaser pic on the first page}\\
+to generate semantic object maps of human living environment.
+
+
 As an example, consider the following query that might arise within a
 household scenario: A human asks the robot to retrieve a glass he had
 been drinking from earlier. This simple request can spawn several queries to
@@ -594,8 +598,13 @@ possibly additional manipulation constraints linked to the glass, such
 as maintaining a vertical orientation over the whole action.
 A system that is able to tackle above described challenges, to the best of our
 knowledge, does not exist.\\
-\todo{Dejan: Collaboration between these PR2 Beta Sites:
-LAAS, Freiburg, Berkeley, Bosch, Willow, UPENN}
+The system will gain the maximum leverage from the algorithms and code available
+in Robot Operating System~\footnote{\url{www.ros.org}} as well as from the cooperation
+with the world renowned scientists involved in the PR2 Beta Program~\footnote{\url{http://www.willowgarage.com/pages/pr2/pr2-community}}.
+In particular we plan to collaborate with and search expertise from Rachid Alami from LAAS, Wolfram Burgard
+from University of Freiburg, Ben Pitzer from Bosch RTC, Brian Gerkey et al from Willow Garage Inc, 
+Kei Okada from University of Tokyo and Maxim Likhachev (previously UPENN, now CMU).
+All enlisted scientists have been consulted and confirmed their participation.
 \subsection{Timeliness and relevance of the project}
 With all the recent advances in the field of personal robotics and with first
 personal robots projected to be deployed in households within next 5 to 10 years, 
@@ -609,21 +618,20 @@ approaches to build semantic environment models to be used in robots' everyday o
 The applicant will need to be additionally trained within the host group, as will be discussed in Section 
 \ref{sec:training}, to pursue the proposed research, which is also a significant part of the Marie Curie program.
 Since the \ksem\ project is setup such to exploit the mutual leverage with the open source ROS 
-community~\footnote{www.ros.org} and the PR2 Beta community~\footnote{http://www.willowgarage.com/pages/pr2/pr2-community} 
+community and the PR2 Beta community 
 in terms of code reusability, feedback from other experienced researchers and critical reviews, 
 it will make a significant contribution in enhancing the continuously advancing scientific excellence within Europe. 
 Both the applicant and the  environment in which the project will be realized will benefit significantly from the 
 realization of the proposed project, since also members, senior and junior ones, from the 
-host group will have their opportunity to assist the \ksem research. \\
-\todo{Eric: Check if this is enough.}
+host group will have their opportunity to assist the \ksem\ research. \\
 %It will help specify environments for Robots and thus accelerate bringing of robots into peoples' homes
 %Point out examples such as openCV, PCL, gmappping, KnowRob, etc
 
 \subsection{Host research expertise in the field and quality of the group/supervisors}
-Michael Beetz from Intelligent Autonomous Systems group, Technische Universit\"at 
-M\"unchen (TUM) will represent the host organization in the project and Pieter Abbeel
-from EECS department, University of California at Berkeley will represent
-the partner organization. 
+Michael Beetz from Intelligent Autonomous Systems (in continuation IAS) group, Technische Universit\"at 
+M\"unchen (TUM) will represent the return host organization in the project and Pieter Abbeel and Ken
+Goldberg, University of California at Berkeley (in continuation Berkeley) will represent
+the outgoing host organization. 
 Prof. Beetz is a vice coordinator of the German national cluster of excellence 
 COTESYS (Cognition for Technical Systems) where he is also co-coordinator of the research area 
 ``Knowledge and Learning''. Prof Beetz was a member of the steering committee of the European 
@@ -644,13 +652,14 @@ particular, three robot manipulation platforms -- a PR2\footnote{\url{http://www
 iCub\footnote{\url{http://www.robotcub.org}} and a custom-built robot
 with KUKA leightweight arms and DLR/HIT hands -- are available for
 real-world experiments on a daily basis. So is the testbed kitchen environment with an ample
-set of ubiquitous devices such as Kinects sensors, ceiling cameras, RFID readers, etc.
-
+set of ubiquitous devices such as Kinect sensors, ceiling cameras, RFID readers, etc.
 %Michael: planning, knowledge for robots, 3D perception, mobile manipulation, Pieter and Ken: machine learning, 
 %mobile manipulation, reinforcement learning
 \todo{Pieter, Ken: Above like description for you and Ken}\\
 \todo{Dejan: Shorten list of references}
+\begin{small}
 \begin{multicols}{2}
 \bibliography{ksem}
 \end{multicols}
+\end{small}
 \newpage
