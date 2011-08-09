@@ -1,0 +1,231 @@
+%%% Things to change in template are marked with %TBC%
+
+\documentclass[10pt,twoside,fleqn,a4paper]{article}
+
+\usepackage[a4paper,hdivide={30mm,*,30mm},vdivide={30mm,*,30mm}]{geometry}
+\usepackage{graphicx}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{array}
+%\usepackage{iasbib}
+\usepackage{subfig}
+\usepackage{xspace}
+\usepackage{tikz}
+%\usepackage{tikz-kitchens}
+\usepackage{gantt}
+\usepackage{varioref}
+\usepackage{eurosym}
+\usepackage{bibentry}
+\usepackage{fancyhdr}
+%\usepackage{named}
+\usepackage{ifthen}
+\usepackage{pgfmoreshapes}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+%\usepackage{setspace}                % line spacing
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage[latin1]{inputenc}
+\usepackage{tweaklist}
+\usepackage{hyperref}
+\usepackage{soul}
+
+\usepackage[round]{natbib}
+%\bibliographystyle{dinat}
+
+\usepackage[final]{pdfpages}
+
+\usepackage{titlesec}
+\usepackage{zeitplantools}
+
+\titlespacing*{\section}{0pt}{*2}{*1}
+\titlespacing*{\subsection}{0pt}{*2}{*1}
+\titlespacing*{\subsubsection}{0pt}{*2}{*1}
+
+%\onehalfspacing
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\ksem}[0]{\textsc{KSOM}}
+
+%\newcommand{\todo}[1]{\textbf{\textcolor{red}{TODO: #1}}}
+\newcommand{\todo}[1]{\hl{#1}}
+
+\usetikzlibrary{calc,shapes,positioning,chains,fit,patterns}
+\usetikzlibrary{arrows,snakes,backgrounds,shapes,automata,positioning,chains,calc,fit}
+
+\bibliographystyle{apalike}
+
+\newcommand{\anm}[1]{\textcolor{red!80!black}{#1}}
+%\newcommand{\projname}{ExaM\xspace}  %TBC% PROJECT SHORT NAME
+\newcommand{\projnamelong}{Knowledge-enabled Semantic Object Maps for  Mobile Robotics}
+%\newcommand{\spp}{SPP1527 Autonomous Learning\xspace}
+\newcommand{\affordances}[0]{\textsc{AFFORDANCES}}
+\newcommand{\cotesys}[0]{\textsc{CoTeSys}}
+
+
+\newcommand{\deutsch}[1]{\par\vspace{1ex}\noindent{\rmfamily #1}}
+
+\pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}
+
+\graphicspath{{figures/}}
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\subsubsection*{\refname}%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\newenvironment{costs}{
+\begin{flushleft}
+\begin{tabular}{p{.65\textwidth}rr}
+& per year ~ ~ & 3 years ~ ~\\
+\hline
+}{
+\end{tabular}
+\end{flushleft}
+}
+\newcommand{\totals}[2]{\cline{3-3} & & \textbf{#1}}
+
+\setcounter{secnumdepth}{3}
+
+\lhead{}
+\rhead{}
+
+%TBC% Project Title
+\chead{\projnamelong}
+\cfoot{\thepage}
+
+\begin{document}
+
+\frenchspacing
+
+\addtolength{\parskip}{1ex}
+
+\pagestyle{empty}
+\parindent0mm
+
+\vspace*{10mm}
+\begin{center}
+  \vspace{6ex}
+  \emph{\ksem} \\
+  \vspace{6ex}
+  STARTPAGE \\
+  \vspace{6ex}
+  PEOPLE \\
+  MARIE CURIE ACTIONS \\
+  \vspace{6ex}
+  International Outgoing Fellowships (IOF) \\
+  Call: FP7-PEOPLE-2011-IOF\\
+  \vspace{6ex}
+  PART B \\
+  \vspace{6ex}
+  ``\ksem''
+\end{center}
+
+\vfill
+
+{\small\parskip-1ex
+  \setcounter{tocdepth}{1}
+  \tableofcontents
+}
+
+~
+
+
+\newpage
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vfill
+~\\
+\begin{figure}
+  \begin{centering}
+    \includegraphics[width=0.3\textwidth]
+    {figures/storage_rack.JPG}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/pr2_edeka_basket_1.jpg}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/basket_full.jpg} \\
+    % {\large$\rightarrow$}
+    % \includegraphics[width=0.3\textwidth]
+    % {mapping/clutter/basket_flipped.jpg}\\
+    \vspace{2ex}
+    \includegraphics[width=0.3\textwidth]
+    {figures/objects.jpg}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]{figures/xml_map.png}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/pr2_highdrawer.jpg}
+  \end{centering}
+  \caption{Robot simulating a shopping task and making use of \ksem\ generated semantic object map.}
+  \label{fig:teaser}
+\end{figure}
+~\\
+%\vfill
+
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\pdfbookmark[1]{Inhaltsverzeichnis}{inhalt}
+%\tableofcontents
+%
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+\pagestyle{fancy}
+
+\input{01-quality} % 2 Seiten
+\newpage
+\input{02-training}   % 6 Seiten
+\newpage
+\input{03-researcher}              % 6 Seiten
+%\newpage
+\input{04-implementation}          % 1 Seite
+%\newpage
+\input{05-impact}       % 2 Seiten
+%\newpage
+\input{06-ethics}        % insgesamt 3 Seiten (je eine für 6., 7., 8.)
+\newpage
+
+%\pdfbookmark[1]{Literatur}{literatur}
+%\bibliography{ksem.bib}
+
+%\thispagestyle{plain}
+%$~$
+%
+%\pagebreak
+
+%\appendix
+%\input{}
+
+%\noindent
+%Explanation why appendix is necessary
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% References are listed at the end of Section 2.1
+\end{document}
+

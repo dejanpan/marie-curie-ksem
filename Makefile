@@ -1,4 +1,4 @@
-SRC = ksem
+SRC = ksom
 CV = pangercic_cv
 
 all:
