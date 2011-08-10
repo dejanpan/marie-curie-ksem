@@ -383,7 +383,35 @@ the following three subgoals of the project: \\
 %   shopping bag, set the table for a given meal, or cleaning the table,
 %   while stowing items in their respective places, such as the fridge or
 %   dish washer) and task-dependent partial environment mapping.
-
+\begin{figure}
+  \begin{centering}
+    \includegraphics[width=0.3\textwidth]
+    {figures/storage_rack.JPG}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/pr2_edeka_basket_1.jpg}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/clutter-objects.png} \\
+    % {\large$\rightarrow$}
+    % \includegraphics[width=0.3\textwidth]
+    % {mapping/clutter/basket_flipped.jpg}\\
+    \vspace{2ex}
+    \includegraphics[width=0.3\textwidth]
+    {figures/all_segmented.png}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]{figures/xml_map.png}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/pr2_highdrawer.jpg}
+  \end{centering}
+  \caption{Robot simulating a shopping task and making use of \ksem\ generated semantic object map. \textbf{Top-left, top-middle:} 
+    typical objects and scenes that robot is to perceive and manipulate using mechanisms from \ksem. 
+    \textbf{Top-right:} recognition and pose detection of objects in cluttered scenes. \textbf{Bottom-left, bottom-middle:} 
+  3D-based environment reconstruction and static world modeling. \textbf{Bottom-right:} Robot learns typical storage locations
+using e.g. WUP similarities and places the object where it belongs to.}
+  \label{fig:teaser}
+\end{figure}
 All of the subgoals named above are to be implemented in a system that
 is to run on real robot platforms in real household environments.
 
