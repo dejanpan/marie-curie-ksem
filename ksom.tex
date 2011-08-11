@@ -37,10 +37,6 @@
 \usepackage{titlesec}
 \usepackage{zeitplantools}
 
-\titlespacing*{\section}{0pt}{*2}{*1}
-\titlespacing*{\subsection}{0pt}{*2}{*1}
-\titlespacing*{\subsubsection}{0pt}{*2}{*1}
-
 %\onehalfspacing
 \renewcommand{\familydefault}{\sfdefault}
 \newcommand{\ksem}[0]{\textsc{KSOM}}
@@ -108,6 +104,13 @@
 %TBC% Project Title
 \chead{\projnamelong}
 \cfoot{\thepage}
+
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{1em}
+%\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{2ex}{1ex}
+\titlespacing{\subsection}{0pt}{1ex}{0ex}
+\titlespacing{\subsubsection}{0pt}{0.5ex}{0ex}
 
 \begin{document}
 

@@ -1,5 +1,34 @@
 \section{IMPLEMENTATION} % (MAXIMUM 6 PAGES) 
 \label{sec:implementation}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.25\textwidth]
+    {figures/storage_rack.JPG}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.25\textwidth]
+    {figures/pr2_edeka_basket_1.jpg}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.25\textwidth]
+    {figures/clutter-objects.png} \\
+    % {\large$\rightarrow$}
+    % \includegraphics[width=0.25\textwidth]
+    % {mapping/clutter/basket_flipped.jpg}\\
+    \vspace{2ex}
+    \includegraphics[width=0.25\textwidth]
+    {figures/all_segmented.png}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.25\textwidth]{figures/xml_map.png}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.25\textwidth]
+    {figures/pr2_highdrawer.jpg}
+  \end{center}
+  \caption{\small{Robot simulating a shopping task and making use of \ksem\ generated semantic object map. \textbf{Top-left, top-middle:} 
+    typical objects and scenes that robot is to perceive and manipulate using mechanisms from \ksem. 
+    \textbf{Top-right:} recognition and pose detection of objects in cluttered scenes. \textbf{Bottom-left, bottom-middle:} 
+  3D-based environment reconstruction and static world modeling. \textbf{Bottom-right:} Robot learns typical storage locations
+using e.g. WUP~\cite{wup} similarities and places the object where it belongs to.}}
+  \label{fig:teaser}
+\end{figure}
 \subsection{Quality of infrastructure / facilities and international collaboration of host} 
 \subsubsection{Berkeley}
 Berkeley's Department of  Electrical Engineering and Computer Sciences
@@ -227,6 +256,8 @@ and/or maintaining such right on  a case-by-case basis. The same shall
 apply for use and licensing such right. In case of a commercial use by
 a  PARTY   or  licensing  to  third   parties,  appropriate  financial
 compensation shall be given to the other PARTY concerned.''
+
+
 \begin{table}[h!]
   \begin{Timeplan}
     % ---------------------------------------------------------------------
@@ -308,40 +339,8 @@ compensation shall be given to the other PARTY concerned.''
   \caption{Workplan}
   \label{tab:timeplan}
 \end{table}
-%work plan, gantt diagram, \\
-%todo{Eric: Do we need risk analysis???}
 
-\begin{figure}
-  \begin{centering}
-    \includegraphics[width=0.3\textwidth]
-    {figures/storage_rack.JPG}
-    {\large$\rightarrow$}
-    \includegraphics[width=0.3\textwidth]
-    {figures/pr2_edeka_basket_1.jpg}
-    {\large$\rightarrow$}
-    \includegraphics[width=0.3\textwidth]
-    {figures/clutter-objects.png} \\
-    % {\large$\rightarrow$}
-    % \includegraphics[width=0.3\textwidth]
-    % {mapping/clutter/basket_flipped.jpg}\\
-    \vspace{2ex}
-    \includegraphics[width=0.3\textwidth]
-    {figures/all_segmented.png}
-    {\large$\rightarrow$}
-    \includegraphics[width=0.3\textwidth]{figures/xml_map.png}
-    {\large$\rightarrow$}
-    \includegraphics[width=0.3\textwidth]
-    {figures/pr2_highdrawer.jpg}
-  \end{centering}
-  \caption{Robot simulating a shopping task and making use of \ksem\ generated semantic object map. \textbf{Top-left, top-middle:} 
-    typical objects and scenes that robot is to perceive and manipulate using mechanisms from \ksem. 
-    \textbf{Top-right:} recognition and pose detection of objects in cluttered scenes. \textbf{Bottom-left, bottom-middle:} 
-  3D-based environment reconstruction and static world modeling. \textbf{Bottom-right:} Robot learns typical storage locations
-using e.g. WUP~\cite{wup} similarities and places the object where it belongs to.}
-  \label{fig:teaser}
-\end{figure}
-
-\newpage
+%\newpage
 \subsection{Practical and administrative arrangements and support for the hosting of the fellow 
 } 
 A concrete help for all practical and administrative issues with local authorities related to 
@@ -365,3 +364,4 @@ The applicant will also contract with the return host institution TUM a 3 years 
 contract for the full project period. A model for Marie-Curie IOF fellows is already available 
 and will detail items such as the salary, mobility allowances and social security to just name a few.
 \newpage
+%\pagebreak[4]
