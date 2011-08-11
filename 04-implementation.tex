@@ -59,7 +59,6 @@ Additional equipment includes PhaseSpace MoCap, Vicon MoCap (2x),
 4 SensAble Technologies Phantom Omni haptice devices, open space for
 PR2 in which the test environments for \ksem\ project will be set up.
 
-%\todo{about Pieter's and Ken's group}
 \subsubsection{TUM}
 In  recent years, the  Technische Universit\"at  M\"unchen (TUM)  has been
 consistently ranked the top academic institution in Germany in several
@@ -311,6 +310,37 @@ compensation shall be given to the other PARTY concerned.''
 \end{table}
 %work plan, gantt diagram, \\
 %todo{Eric: Do we need risk analysis???}
+
+\begin{figure}
+  \begin{centering}
+    \includegraphics[width=0.3\textwidth]
+    {figures/storage_rack.JPG}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/pr2_edeka_basket_1.jpg}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/clutter-objects.png} \\
+    % {\large$\rightarrow$}
+    % \includegraphics[width=0.3\textwidth]
+    % {mapping/clutter/basket_flipped.jpg}\\
+    \vspace{2ex}
+    \includegraphics[width=0.3\textwidth]
+    {figures/all_segmented.png}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]{figures/xml_map.png}
+    {\large$\rightarrow$}
+    \includegraphics[width=0.3\textwidth]
+    {figures/pr2_highdrawer.jpg}
+  \end{centering}
+  \caption{Robot simulating a shopping task and making use of \ksem\ generated semantic object map. \textbf{Top-left, top-middle:} 
+    typical objects and scenes that robot is to perceive and manipulate using mechanisms from \ksem. 
+    \textbf{Top-right:} recognition and pose detection of objects in cluttered scenes. \textbf{Bottom-left, bottom-middle:} 
+  3D-based environment reconstruction and static world modeling. \textbf{Bottom-right:} Robot learns typical storage locations
+using e.g. WUP~\cite{wup} similarities and places the object where it belongs to.}
+  \label{fig:teaser}
+\end{figure}
+
 \newpage
 \subsection{Practical and administrative arrangements and support for the hosting of the fellow 
 } 

@@ -56,7 +56,7 @@ activities, which include:
   objects' state and position over time.
 \end{itemize}
 
-\todo{Dejan: SHORTEN}\\
+%\todo{Dejan: SHORTEN}\\
 According to the research topics of the \ksem\ project, we will now
 briefly review relevant research directions in the areas of semantic
 object maps, object perception, knowledge representation for robots, statistical relational models,
@@ -102,16 +102,17 @@ use of vision. An object-based approach for cognitive maps is used to
 recognize objects and classify rooms in different categories
 in~\cite{vasudevan07cognitive}, while
 in~\cite{Mozos2006iros,MartinezMozos07a}, places are semantically
-labeled into doorways, kitchens, corridors, rooms.  The advantages of
-these representations are straightforward: they keep the computational
-cost low enough and base their localization and pose estimation on the
-well-known 2D SLAM (Simultaneous Localization and Mapping) problem,
-while the problem of place labeling is solved through the usage of
-feature descriptors and machine learning.  However, by reducing the
-dimensionality of the mapping to 2D, most of the world geometry needed
-for manipulation is lost.  Also, the label categories need to be
-learned a priori through supervised learning and this makes it unclear
-whether these representations scale well.
+labeled into doorways, kitchens, corridors, rooms.  
+% The advantages of
+% these representations are straightforward: they keep the computational
+% cost low enough and base their localization and pose estimation on the
+% well-known 2D SLAM (Simultaneous Localization and Mapping) problem,
+% while the problem of place labeling is solved through the usage of
+% feature descriptors and machine learning.  However, by reducing the
+% dimensionality of the mapping to 2D, most of the world geometry needed
+% for manipulation is lost.  Also, the label categories need to be
+% learned a priori through supervised learning and this makes it unclear
+% whether these representations scale well.
 
 % With few exceptions, in particular in the area of cognitive
 % mapping as \cite{vasudevan07cognitive} and the work of Modayil and Kuipers~\cite{Modayil04}, but also
@@ -156,11 +157,12 @@ authors use stereo cameras, but their approach works reliably only to
 the extent provided by the training data.  Another issue is the
 segmentation of objects, since grasp points are provided with no
 information about what objects are in the scene and to which of them
-do the identified points correspond.  Bone et
-al.~\cite{Lambert08Grasping} use an accurate line laser and a camera
-to build models and identify grasping points for novel objects with
-very encouraging results.  However the system was tested only on two
-objects, thus its scalability is not clear.
+do the identified points correspond.  
+% Bone et
+% al.~\cite{Lambert08Grasping} use an accurate line laser and a camera
+% to build models and identify grasping points for novel objects with
+% very encouraging results.  However the system was tested only on two
+% objects, thus its scalability is not clear.
 
 In purely computer vision based approaches, features like the ones described by
 Lowe~\cite{lowe04distinctive} or Lepetit and Fua~\cite{lepetit06keypoint} are
@@ -235,7 +237,7 @@ and do not leverage the power of hierarchical, abstract knowledge representation
 Galindo et al.~\cite{galindo08taskplanning} present a system for automatically building maps that
 combine a \emph{spatial hierarchy} of local metric and global topological maps with a \emph{conceptual
 hierarchy} that describes some semantic properties of rooms and objects. In this respect, their approach is
-similar to ours, but the conceptual hierarchy is much simpler and the spatial description much coarser.\\
+similar to ours, but the conceptual hierarchy is much simpler and the spatial description much coarser.
 In~\cite{iros10kcopman} we developed a system that generates symbolic representations
 of perceived objects and scenes and infers answers to complex queries that require the combination of perception and knowledge
 processing.
@@ -333,7 +335,7 @@ entity; the importance of certain predicates can be learned from
 statistical data.  Most importantly, this relational approach
 considers the objects collectively and does not assume that the
 equivalence of a pair of objects is independent of other
-equivalences. \\
+equivalences.
 %Intro to the proposal, Semantic maps (temporal and spatial aspects), multidisciplinarity vs interdisciplinarity:
 %robotic perception (2D + 3D), AI and machine learning
 \subsection{Appropriateness of research methodology and approach}
@@ -379,42 +381,14 @@ the following three subgoals in the \ksem\ project: \\
       for \ksem\ project.
   \end{itemize}
   These learning problems require autonomous and on-demand (partial) 
-  processing of sensor data to enable life-long learning.\\
+  processing of sensor data to enable life-long learning.
 % \textbf{Subgoal 4: Applications for robot control} to enable
 %   real-world problem-solving within a household assistance system such
 %   as execution of everyday manipulation actions (e.g. emptying a
 %   shopping bag, set the table for a given meal, or cleaning the table,
 %   while stowing items in their respective places, such as the fridge or
 %   dish washer) and task-dependent partial environment mapping.
-\begin{figure}
-  \begin{centering}
-    \includegraphics[width=0.3\textwidth]
-    {figures/storage_rack.JPG}
-    {\large$\rightarrow$}
-    \includegraphics[width=0.3\textwidth]
-    {figures/pr2_edeka_basket_1.jpg}
-    {\large$\rightarrow$}
-    \includegraphics[width=0.3\textwidth]
-    {figures/clutter-objects.png} \\
-    % {\large$\rightarrow$}
-    % \includegraphics[width=0.3\textwidth]
-    % {mapping/clutter/basket_flipped.jpg}\\
-    \vspace{2ex}
-    \includegraphics[width=0.3\textwidth]
-    {figures/all_segmented.png}
-    {\large$\rightarrow$}
-    \includegraphics[width=0.3\textwidth]{figures/xml_map.png}
-    {\large$\rightarrow$}
-    \includegraphics[width=0.3\textwidth]
-    {figures/pr2_highdrawer.jpg}
-  \end{centering}
-  \caption{Robot simulating a shopping task and making use of \ksem\ generated semantic object map. \textbf{Top-left, top-middle:} 
-    typical objects and scenes that robot is to perceive and manipulate using mechanisms from \ksem. 
-    \textbf{Top-right:} recognition and pose detection of objects in cluttered scenes. \textbf{Bottom-left, bottom-middle:} 
-  3D-based environment reconstruction and static world modeling. \textbf{Bottom-right:} Robot learns typical storage locations
-using e.g. WUP~\cite{wup} similarities and places the object where it belongs to.}
-  \label{fig:teaser}
-\end{figure}
+
 All of the subgoals named above are to be implemented in a system that
 is to run on real robot platforms in real household environments.
 
@@ -621,7 +595,6 @@ will design, implement and empirically analyze semantic model
 acquisition mechanisms for objects and everyday activities in order 
 to generate semantic object maps of human living environment.
 
-
 As an example, consider the following query that might arise within a
 household scenario: A human asks the robot to retrieve a glass he had
 been drinking from earlier. This simple request can spawn several queries to
@@ -635,7 +608,7 @@ map or surface mesh of the whole environment for collision avoidance or
 possibly additional manipulation constraints linked to the glass, such
 as maintaining a vertical orientation over the whole action.
 A system that is able to tackle above described challenges, to the best of our
-knowledge, does not exist.\\
+knowledge, does not exist.
 The system will gain the maximum leverage from the algorithms and code available
 in Robot Operating System (ROS)~\footnote{\url{www.ros.org}} as well as from the cooperation
 with the world renowned scientists involved in the PR2 Beta Program~\footnote{\url{http://www.willowgarage.com/pages/pr2/pr2-community}}.
@@ -663,7 +636,7 @@ in terms of code re-usability, feedback from other experienced researchers and c
 it will make a significant contribution in enhancing the continuously advancing scientific excellence within Europe. 
 Both the applicant and the  environment in which the project will be realized will benefit significantly from the 
 realization of the proposed project, since also members, senior and junior ones, from the 
-host groups will have their opportunity to assist the \ksem\ research. \\
+host groups will have their opportunity to assist the \ksem\ research.
 %It will help specify environments for Robots and thus accelerate bringing of robots into peoples' homes
 %Point out examples such as openCV, PCL, gmappping, KnowRob, etc
 
@@ -697,6 +670,7 @@ Universities and Research Institutions in Europe and United States.
 % set of ubiquitous devices such as Kinect sensors, ceiling cameras, RFID readers, etc.\\
 %Michael: planning, knowledge for robots, 3D perception, mobile manipulation, Pieter and Ken: machine learning, 
 %mobile manipulation, reinforcement learning
+
 Pieter Abbeel's research interests lie at the intersection of robotics, machine learning and control. Current
 projects focus on the application areas of personal robotics, surgical robotics and autonomous flight.
 In the personal robotics arena, thus far Abbeel's group's focus has been on the manipulation of deformable
