@@ -10,8 +10,8 @@ Semantic Object Maps) investigates a new generation of environment models that
 are to enable  robots to perform everyday manipulation  tasks in human
 environments effectively and efficiently.   To this end, \ksem\ proposal
 extends state-of-the-art  models such  as Semantic Object  Models with
-probabilistic  spatio-temporal   information:  they  probabilistically
-represent where objects typically are, where objects belong, the state
+probabilistic  spatio-temporal   information:  it  probabilistically
+represents where objects typically are, where objects belong, the state
 of  objects  depending  on  their  location  (perishable  objects  are
 typically to  be found in  refrigerators), the dependence  of activity
 contexts  on  object locations  (if  pots are  on  the  oven then  the
@@ -33,7 +33,7 @@ everyday activities and statistical relational learning. Usefulness of
 the \ksem\ project will be demonstrated  in the context of  setting  the  table, 
 loading  the  dishwasher and simulating the shopping task (see Figure~\ref{fig:teaser}, and 
 our video~\footnote{\url{http://youtu.be/x0Ybod_6ADA}} accepted at AAAI 2011 Video Challenge).
-The joint probability distributions of semantic object maps in \ksem are to represent the
+The joint probability distributions of semantic object maps in \ksem\ are to represent the
 dynamic aspects of the environment in the context of everyday
 activities, which include:
 \begin{itemize}
@@ -59,7 +59,7 @@ activities, which include:
 \todo{Dejan: SHORTEN}\\
 According to the research topics of the \ksem\ project, we will now
 briefly review relevant research directions in the areas of semantic
-object maps, object perception,knowledge representation for robots, statistical relational models,
+object maps, object perception, knowledge representation for robots, statistical relational models,
 spatio-temporal learning, and entity resolution. The project will
 explicitly not deal with the research on perception of humans and their activities.
 Where needed we will either apply manual labeling techniques or make use 
@@ -127,7 +127,7 @@ using an appearance based method, then 3D matching to a model is
 performed to evaluate the classification. This however requires 2D
 models for all poses of each object to be detected, as well as the
 complete 3D models. The same holds true for postures in the case of humans.
-Primarily we will base our work on our past work where we have built a
+We will primarily base our work on our past projects where we have built a
 system for autonomous semantic mapping~\cite{mapping11iros}.
 \subsubsection{Object Detection, Recognition, and Reconstruction for Pick-and-Place Tasks}
 \label{sec:objects}
@@ -189,31 +189,34 @@ this is a more direct method, it is still dependent on a database of CAD models.
 % Since the point clouds presented there are complete, the authors do not
 % need to reconstruct the missing parts.
 
-Thrun and Wegbreit~\cite{Thrun05Symmetries} describe a method for detecting and verifying
-symmetries in point clouds obtained from a single viewpoint which works very well for
-nicely segmented objects, however the problem of under- or over-segmented objects remains.
+% Thrun and Wegbreit~\cite{Thrun05Symmetries} describe a method for detecting and verifying
+% symmetries in point clouds obtained from a single viewpoint which works very well for
+% nicely segmented objects, however the problem of under- or over-segmented objects remains.
 
-Object categorization goes hand in hand with segmentation and is usually
-performed using a single sensing device.  Given a large set of training
-values containing all possible views, most approaches try to abstract the
-problem by using features like the ones proposed by Quack et al.~\cite{quack2007emf},
-Yan et al.~\cite{yan2007mbo}, and Savarese and Fei-Fei~\cite{savarese2007goc},
-which work best on low scale and texture variance.  The
-scaling variance can be reduced significantly by a previous segmentation.
+% Object categorization goes hand in hand with segmentation and is usually
+% performed using a single sensing device.  Given a large set of training
+% values containing all possible views, most approaches try to abstract the
+% problem by using features like the ones proposed by Quack et al.~\cite{quack2007emf},
+% Yan et al.~\cite{yan2007mbo}, and Savarese and Fei-Fei~\cite{savarese2007goc},
+% which work best on low scale and texture variance.  The
+% scaling variance can be reduced significantly by a previous segmentation.
 % Saxena et al.~\cite{saxena:07:iccv} try to extract the 3D world out of only one view in
 % order to improve the segmentation of objects.  Another approach is to
 % actively explore the environment and segment objects using the motion to
 % generate 3D shape information, as done by Welke et al.~\cite{welke2008osu}
 % and Feldman and Weinshall~\cite{feldman2008msa} for example.
 
-To improve the segmentation, Lai and Fox \cite{Lai-RSS-09} take a randomized approach
-by classifying a ``soup of segments'' generated by different combinations of clusters,
-and use the results to get a final segmentation. They also explore different domain
-adaptation techniques in order to incorporate synthetic data in training their classifier.
-Though they are working with outdoor data, the same techniques can be applied to segment
-and classify indoor objects using low resolution 3D data, e.g. from time-of flight cameras.
-Our starting point will be however our past work on object categorization and recognition
-as presented in~\cite{marton11ijrr}.
+% To improve the segmentation, Lai and Fox \cite{Lai-RSS-09} take a randomized approach
+% by classifying a ``soup of segments'' generated by different combinations of clusters,
+% and use the results to get a final segmentation. They also explore different domain
+% adaptation techniques in order to incorporate synthetic data in training their classifier.
+% Though they are working with outdoor data, the same techniques can be applied to segment
+% and classify indoor objects using low resolution 3D data, e.g. from time-of flight cameras.
+% Our starting point will be however our past work on object categorization and recognition
+% as presented in~\cite{marton11ijrr}.
+Recent advent of RGB-D cameras like Kinect has completely revolutionized this field of research
+and enabled fast and robust object categorization and classification~\cite{Lai_sparsedistance} which
+we will pursue as well.
 \subsubsection{Symbolic Knowledge for \ksem}
 \label{sec:knowledge-representation}
 For performing high-level tasks, robots need large amounts of semantic information from their environment model,
@@ -251,7 +254,7 @@ link prediction~\cite{taskar03link} and object identification~\cite{singla06enti
 In particular, the methods of statistical relational learning allow
 to represent full-joint distributions over logical propositions about a changing set of entities in
 a concise, declarative manner, and they provide a fully integrated framework for learning and inference. Therefore,
-they are ideally suited to the representation of the probabilistic components of semantic object maps in \ksem as we envision them,
+they are ideally suited for the representation of the probabilistic components of semantic object maps in \ksem\ as we envision them,
 since we need to consider, for example, spatial relations between objects in the environment, their attributes
 changing over time, their relevance to activities taking place and the effect these activities may have upon them.
 
@@ -259,7 +262,7 @@ changing over time, their relevance to activities taking place and the effect th
 \label{sec:spatio-temporal-learning}
 
 Our intended research in learning spatio-temporal structures for
-semantic object maps in \ksem is inspired by research in visual analytics for the analysis
+semantic object maps in \ksem\ is inspired by research in visual analytics for the analysis
 of movement data. Andrienko et al. learn concepts like the
 working place, the living place, typical navigation routes and other
 spatio-temporal behavior patterns from GPS-data from their car
@@ -336,13 +339,13 @@ equivalences. \\
 \subsection{Appropriateness of research methodology and approach}
 \label{sec:q2}
 In order to clarify the motivation from above, we identified
-the following three subgoals of the project: \\
+the following three subgoals in the \ksem\ project: \\
 \textbf{Subgoal 1: Representations in \ksem} will be hybrid by
   integrating geometric descriptions (such as primitives, meshes,
   voxels), first-order description-logic-based symbolic representations
   (e.g. symbolic object properties, relations between objects and object
   classes) and probablistic first-order representations (including
-  Markiv logic and Bayesian logic networks).
+  Markov logic and Bayesian logic networks).
   Together with a representation language based on OWL (Web Ontology
   Language) and a concept ontology based on researchCyc (an encyclopedic
   knowledge base), these representations can be stored, extended and
@@ -360,7 +363,7 @@ the following three subgoals of the project: \\
     \item Learning typical locations of objects such as storage or
       usage locations, and interpretation of containers based on a
       generalization of their contents (e.g. fridge);
-    \item Learning action-related places are places where actions are
+    \item Learning action-related places which are places where actions are
       performed or objects take on certain roles in actions. This allows
       a robot to learn e.g. the concept of a chair by its role to
       support people as opposed to purely geometric or appearance
@@ -440,7 +443,7 @@ three tasks.
   \item[Task 1.2: Spatial Relations and Scene Representation and
     Reasoning] Representational primitives of key importance in
     \ksem\ project are qualitative as well as quantitative spatial relations.
-    They are essential for parameterizing robot actions and
+    They are essential for parameterizing robot's actions and
     communicating abstract information about the environment,
     respectively. While quantitative relations can be obtained in a
     straight-forward manner, qualitative will be realized following an
@@ -455,8 +458,8 @@ three tasks.
     of mobile pick-and-place tasks, where the return host group has
     developed the notion of \emph{action-related places} (\textsc{ARPlaces}), i.e. the
     set of robot poses from which a given pick task is predicted to be
-    successful. A second starting point is our previous work on
-    \emph{grounded action models} (\textsc{GrAM}), where we have introduced a
+    successful. A second starting point is return host's previous work on
+    \emph{grounded action models} (\textsc{GrAM}), where they have introduced a
     new class of concepts in description-logic-based knowledge
     representations, integrating actions and action models into the
     knowledge representation and inference mechanisms of intelligent
@@ -543,7 +546,7 @@ interpretation, object detection and reconstruction.
 
 \subsubsection{Work Package (WP 3): Acquisition and Learning of \ksem\ semantic object maps}
 \label{sec:wp3}
-In this work package, we focus on the learning problems in 
+In this work package, we will focus on the learning problems in 
 \ksem\ which can be described as follows: \emph{Given} (1)~background
 knowledge needed for learning of semantic object maps,  and (2)~a stream
 of time-stamped partial observations of situations concerning what is
@@ -580,7 +583,7 @@ arrangements, \emph{learn} a mapping for this particular environment.
 \item[Task 3.3: Learning Object Arrangements]
   We are planning to expand the perception and learning system we developed
   to consider spatial relations between different objects just as it considered relations between
-  different parts of objects. We will be using \emph{WUP} similarities.
+  different parts of objects.
   An example of such a feature is a qualitative spatial relation
   such as \emph{left of}, which is represented as a 
   pair of positions $\langle$ \emph{o,refo} $\rangle$ where
@@ -636,8 +639,9 @@ knowledge, does not exist.\\
 The system will gain the maximum leverage from the algorithms and code available
 in Robot Operating System~\footnote{\url{www.ros.org}} as well as from the cooperation
 with the world renowned scientists involved in the PR2 Beta Program~\footnote{\url{http://www.willowgarage.com/pages/pr2/pr2-community}}.
-In particular we plan to collaborate with and search expertise from Rachid Alami from LAAS, Wolfram Burgard
-from University of Freiburg, Ben Pitzer from Bosch RTC, Brian Gerkey et al from Willow Garage Inc, 
+In particular we plan to collaborate with and search expertise from Rachid Alami from LAAS, 
+%Wolfram Burgard from University of Freiburg, 
+Ben Pitzer from Bosch RTC, Brian Gerkey et al from Willow Garage Inc, 
 Kei Okada from University of Tokyo, Herman  Bruyninckx from Katholieke Universiteit Leuven and Maxim Likhachev 
 (previously University of Pennsylvania, now Carnegie Mellon University).
 All enlisted scientists have been consulted and confirmed their participation.
@@ -648,7 +652,7 @@ personal robots projected to be deployed in households within next 5 to 10 years
 situations. It will also enable researchers from other fields such as artificial intelligence, 
 psychology, ergonomy, etc to get a grasp at the data and study human living patterns, 
 social acceptance of robots and other high-level concepts.
-The \ksem\ project's relevance under the Marie Curie fellowship within a European 
+Project's relevance under the Marie Curie fellowship within a European 
 setting is connected to the innovative ideas it introduces by combining in a novel way 
 approaches to build semantic environment models to be used in robots' everyday operations.
 The applicant will need to be additionally trained within the host groups, as will be discussed in Section 
@@ -659,7 +663,7 @@ in terms of code re-usability, feedback from other experienced researchers and c
 it will make a significant contribution in enhancing the continuously advancing scientific excellence within Europe. 
 Both the applicant and the  environment in which the project will be realized will benefit significantly from the 
 realization of the proposed project, since also members, senior and junior ones, from the 
-host group will have their opportunity to assist the \ksem\ research. \\
+host groups will have their opportunity to assist the \ksem\ research. \\
 %It will help specify environments for Robots and thus accelerate bringing of robots into peoples' homes
 %Point out examples such as openCV, PCL, gmappping, KnowRob, etc
 
@@ -679,8 +683,8 @@ robotic agents, knowledge processing and representation for robots, integrated r
 Prof. Beetz has published over 200 articles in the first-class conferences and
 journals in the fields of robotics, computer vision and artificial 
 intelligence~\footnote{http://ias.cs.tum.edu/publications}.
-Currently he is leading a group of 2 postdoctoral fellows, 25 grad students and a large number
-of undergrad students and visiting researchers. He is also serving as a principal investigator 
+Currently he is leading a group of 2 postdoctoral fellows, 25 graduate students and a large number
+of undergraduate students and visiting researchers. He is also serving as a principal investigator 
 for TUM's PR2 Beta Program. Prof. Beetz has successfully coordinated and trained 
 more than 15 postdoctoral fellows and PhD students, in addition to a larger number of 
 master's and diploma students. Most of his group alumni currently hold faculty positions in 
